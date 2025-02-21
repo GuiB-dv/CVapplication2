@@ -1,0 +1,17 @@
+/* Educational exp module css */
+.formContainer {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  width: 520px;
+}
+
+/* Form styling */
+.form {
+  flex: 1; /* Allow the form to take up remaining space */
+  display: flex;
+  flex-direction: column;
+}

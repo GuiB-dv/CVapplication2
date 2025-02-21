@@ -1,0 +1,150 @@
+/* A4 Paper with Aspect Ratio */
+.resume {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 10px;
+  margin-bottom: 50px;
+
+  position: fixed;
+  right: 300px;
+}
+
+.resume .h1 {
+  margin-top: 0.4em;
+  margin-bottom: 0.9em;
+}
+
+.a4Paper {
+  width: 550px;
+  min-width: 300px;
+  aspect-ratio: 1 / 1.414; /* A4 aspect ratio (1:√2) */
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 60px;
+  overflow: auto;
+
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Add styles for content */
+.a4Paper section {
+  margin-bottom: 10px;
+}
+
+.a4Paper h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.a4Paper h2 {
+  text-align: center;
+}
+
+.details {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  width: 500px;
+
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+.personalInfo {
+  text-align: center;
+}
+
+.spanTitle {
+  font-weight: bold;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+.spanDate {
+  float: right;
+}
+
+.a4Paper h3 {
+  margin: 0px;
+}
+
+.a4Paper hr {
+  margin-top: 0px;
+}
+
+.buttonDiv {
+  width: 400px;
+}
+
+.resume button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #0065d1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 150px;
+}
+
+.resume button:hover {
+  background-color: #0056b3;
+}
+
+/* Content stop */
+@media screen and (max-width: 1685px) {
+  .resume {
+    left: 700px;
+  }
+}
+
+/* content break */
+@media screen and (max-width: 1100px) {
+  .resume {
+    position: inherit;
+    display: flex;
+  }
+}
+
+/* Print styles */
+@media print {
+  /* Hide the print button */
+  button {
+    display: none;
+  }
+  /* Hide RESUME h1 */
+  .h1 {
+    display: none;
+  }
+  .details {
+    width: 640px;
+  }
+
+  /* Ensure the A4 paper looks good when printed */
+  .a4Paper {
+    width: 640px;
+    position: absolute;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  /* Add page breaks if needed */
+  .details {
+    page-break-after: always; /* Force a page break after each A4 paper */
+  }
+
+  /* Set the print page size to an A4 paper */
+  @page {
+    size: A4;
+    margin-left: 20mm;
+    margin-right: 20mm;
+  }
+}

@@ -1,0 +1,48 @@
+/* Accordion module css */
+.accordion {
+    border: 1px solid #ccc;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    padding: 10px;
+}
+
+.active, .accordion:hover {
+    background-color: #cecece;
+}
+  
+.div {
+    padding: 10px;
+    margin: 10px;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard syntax */
+}
+
+.accordionContent {
+    border-top: none; /* Remove top border to connect with the header */
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chevron {
+    float: right;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.rotate {
+    transform: rotate(180deg);
+}
